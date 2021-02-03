@@ -16,17 +16,17 @@
     </header>
     <main>
         <h3>Valid</h3>
-        <p>This example uses <span>:valid</span> and <span>:unvalid</span> The disadvantage is that the input immediately indicates invalid when the user is typing. Only when the user has typed the correct answer it will be seen as valid.</p>
+        <p>This example uses the <span>:valid</span> and <span>:unvalid</span> property. The disadvantage is that the input immediately indicates invalid when the user is typing. Only when the user has typed the correct answer it will be seen as valid.</p>
         <form action="">
             <label for="text"></label>
-            <input type="text">
+            <input type="email">
         </form>
         <form action="">
         <h3>Not focus</h3>
-        <p>This example uses 
+        <p>This example uses the <span>:invalid:not(:focus)</span> property. The invalid will not work when the input is focused, but instead be white. When the user clicks away from the input, the valid or invalid property will work.</p> 
         <form action="">
             <label for="text"></label>
-            <input type="text">
+            <input type="email">
         </form>
     </main>
 </body>
