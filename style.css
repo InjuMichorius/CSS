@@ -5,10 +5,26 @@
     font-family: poppins;
 }
 
-input[type=email]:valid {
+.pure:valid {
     background-color: #74c7b8;
 }
 
-input[type=email]:invalid {
+.pure:invalid {
     background-color: #ef4f4f;
+}
+
+.not-focus:valid:not(:focus) {
+    background-color: #74c7b8;
+}
+
+.not-focus:not(:focus) {
+    background-color: #ef4f4f;
+}
+
+span.error-message {
+    display: none;
+}
+
+.error:invalid:not(:focus) + span.error-message {
+    display: block;
 }

@@ -16,17 +16,48 @@
     </header>
     <main>
         <h3>Valid</h3>
-        <p>This example uses the <span>:valid</span> and <span>:unvalid</span> property. The disadvantage is that the input immediately indicates invalid when the user is typing. Only when the user has typed the correct answer it will be seen as valid.</p>
+        <p>This example uses the <span>:valid</span> and <span>:unvalid</span> property. The disadvantage is that the
+            input immediately indicates invalid when the user is typing. Only when the user has typed the correct answer
+            it will be seen as valid.</p>
         <form action="">
             <label for="text"></label>
-            <input type="email">
+            <input type="email" class="pure">
         </form>
-        <form action="">
-        <h3>Not focus</h3>
-        <p>This example uses the <span>:invalid:not(:focus)</span> property. The invalid will not work when the input is focused, but instead be white. When the user clicks away from the input, the valid or invalid property will work.</p> 
+
+        <h3>required</h3>
+        <p>When we make the input <span>required</span>, the input will be invalid by default (because no answer is
+            also invalid).</p>
         <form action="">
             <label for="text"></label>
-            <input type="email">
+            <input type="email" class="pure" required>
+        </form>
+
+        <h3>Not focus</h3>
+        <p>This example uses the <span>:valid:not(:focus)</span> property. The invalid will not work when the
+            input is focused, but instead be white. When the user clicks away from the input, the valid or
+            invalid property will work.</p>
+        <form action="">
+            <label for="text"></label>
+            <input type="email" class="not-focus">
+        </form>
+
+        <h3>Error message</h3>
+        <p>It is not possbile to use <span>before</span> and <span>after</span> on an input element. The solution to
+            this is using a <span>span</span>, and show this when the input is invalid.</p>
+        <form action="">
+            <label for="text"></label>
+            <input type="email" class="error">
+            <span class="error-message">Dit is geen e-mail</span>
+        </form>
+
+        <h3>Fieldset</h3>
+        <p>It is not possbile to use <span>before</span> and <span>after</span> on an input element. The solution to
+            this is using a <span>span</span>, and show this when the input is invalid.</p>
+        <form action="">
+            <fieldset class="fielset">
+                <label for="text"></label>
+                <input type="email">
+            </fieldset>
         </form>
     </main>
 </body>
