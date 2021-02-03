@@ -5,20 +5,48 @@
     font-family: poppins;
 }
 
+:root {
+    --primary: #6185B5;
+    --secondary: #98BAED;
+    --valid: #74c7b8;
+    --invalid: #ef4f4f;
+    --primary-text: white;
+    --secondary-text: black;
+}
+
+body{
+    background-color: var(--secondary);
+}
+
+header {
+    width: 100%;
+    text-align: center;
+    background-color: var(--primary);
+    color: var(--primary-text);
+    padding: 1rem 0;
+}
+
+main {
+    width: 60%;
+    margin: auto;
+}
+
+
+
 .pure:valid {
-    background-color: #74c7b8;
+    background-color: var(--valid);
 }
 
 .pure:invalid {
-    background-color: #ef4f4f;
+    background-color: var(--invalid);
 }
 
 .not-focus:valid:not(:focus) {
-    background-color: #74c7b8;
+    background-color: var(--valid);
 }
 
 .not-focus:not(:focus) {
-    background-color: #ef4f4f;
+    background-color: var(--invalid);
 }
 
 span.error-message {
@@ -30,17 +58,17 @@ span.error-message {
 }
 
 .fieldset:invalid {
-    border-color: #ef4f4f;
+    border-color: var(--invalid);
 }
 
 .fieldset:valid {
-    border-color: #74c7b8;
+    border-color: var(--valid);
 }
 
-.fieldset:invalid:before {
+.fieldset:invalid:not(:focus):before {
     content: 'It is not your fault, but no.';
 }
 
-.fieldset:valid:before {
+.fieldset:valid:not(:focus):before {
     content: 'Solid answer!';
 }

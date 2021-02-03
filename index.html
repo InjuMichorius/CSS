@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CSS Selectoren</title>
+    <title>CSS Validatie</title>
     <link rel="icon" href="images/css-3.png" type="image/gif" sizes="16x16">
     <link rel="stylesheet" href="style.css">
 </head>
@@ -19,46 +19,47 @@
         <p>This example uses the <span>:valid</span> and <span>:unvalid</span> property. The disadvantage is that the
             input immediately indicates invalid when the user is typing. Only when the user has typed the correct answer
             it will be seen as valid.</p>
-        <form action="">
+        <fieldset>
             <label for="text"></label>
             <input type="email" class="pure">
-        </form>
+        </fieldset>
 
         <h3>required</h3>
         <p>When we make the input <span>required</span>, the input will be invalid by default (because no answer is
             also invalid).</p>
-        <form action="">
+        <fieldset>
             <label for="text"></label>
             <input type="email" class="pure" required>
-        </form>
+        </fieldset>
 
         <h3>Not focus</h3>
         <p>This example uses the <span>:valid:not(:focus)</span> property. The invalid will not work when the
             input is focused, but instead be white. When the user clicks away from the input, the valid or
             invalid property will work.</p>
-        <form action="">
+        <fieldset>
             <label for="text"></label>
             <input type="email" class="not-focus">
-        </form>
+        </fieldset>
 
         <h3>Error message</h3>
         <p>It is not possbile to use <span>before</span> and <span>after</span> on an input element. The solution to
             this is using a <span>span</span>, and show this when the input is invalid.</p>
-        <form action="">
+        <fieldset>
             <label for="text"></label>
             <input type="email" class="error">
             <span class="error-message">Dit is geen e-mail</span>
-        </form>
+        </fieldset>
 
         <h3>Fieldset</h3>
-        <p>It is not possbile to use <span>before</span> and <span>after</span> on an input element. The solution to
-            this is using a <span>span</span>, and show this when the input is invalid.</p>
-        <form action="">
+        <p>It is also possible to use <span>valid</span> and <span>invalid</span> on a fieldset. We can change the color
+            of the border, but we can also add an error message using <span>content</span>.</p>
             <fieldset class="fieldset">
                 <label for="text"></label>
                 <input type="email">
             </fieldset>
-        </form>
+        <footer>
+            <a href="safe.html">So what the **** can I do with this?</a>
+        </footer>
     </main>
 </body>
 
