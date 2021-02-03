@@ -28,3 +28,19 @@ span.error-message {
 .error:invalid:not(:focus) + span.error-message {
     display: block;
 }
+
+.fieldset:invalid {
+    border-color: #ef4f4f;
+}
+
+.fieldset:valid {
+    border-color: #74c7b8;
+}
+
+.fieldset:invalid:before {
+    content: 'It is not your fault, but no.';
+}
+
+.fieldset:valid:before {
+    content: 'Solid answer!';
+}
