@@ -1,0 +1,100 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: poppins;
+}
+
+:root {
+    --primary: #6185B5;
+    --secondary: #98BAED;
+    --valid: #74c7b8;
+    --invalid: #ef4f4f;
+    --primary-text: white;
+    --secondary-text: black;
+}
+
+body{
+    background-color: var(--secondary);
+    overflow-x: hidden;
+}
+
+header {
+    width: 100%;
+    text-align: center;
+    background-color: var(--primary);
+    color: var(--primary-text);
+    padding: 1rem 0;
+}
+
+label{
+    display: none;
+}
+
+fieldset {
+    border: none;
+}
+
+.doelwit-2, .doelwit-3, .doelwit-4 {
+    display: none;
+}
+
+.doelwit-1:valid + .doelwit-2{
+    display: block;
+}
+
+.doelwit-2:valid + .doelwit-3{
+    display: block;
+}
+
+.doelwit-3:valid + .doelwit-4{
+    display: block;
+}
+
+form {
+    height: 100vh;
+}
+
+form:valid {
+    background-color: green;
+}
+
+.doelwit-1 {
+    animation: doelwit-1 5s linear infinite;
+}
+
+@keyframes doelwit-1 {
+    0% {transform: translateX(0%);}
+    50% {transform: translateX(100%);}
+    100% {transform: translateX(0%);}
+}
+
+.doelwit-2 {
+    animation: doelwit-2 5s linear infinite;
+}
+
+@keyframes doelwit-2 {
+    0% {transform: translate(20rem, -20rem);}
+    50% {transform: translate(100%, 80%);}
+    100% {transform: translate(0%, 20%);}
+}
+
+.doelwit-3 {
+    animation: doelwit-3 5s linear infinite;
+}
+
+@keyframes doelwit-3 {
+    0% {transform: translate(100%, 100%);}
+    50% {transform: translate(100%, 0%);}
+    100% {transform: translate(0%, 100%);}
+}
+
+.doelwit-4 {
+    animation: doelwit-4 5s linear infinite;
+}
+
+@keyframes doelwit-4 {
+    0% {transform: translate(0%, 100%);}
+    50% {transform: translate(100%, 0%);}
+    100% {transform: translate(0%, 100%);}
+}
