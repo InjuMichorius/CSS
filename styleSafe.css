@@ -55,8 +55,21 @@ form {
     height: 100vh;
 }
 
+input{
+    width: 8rem;
+}
+
+span {
+    display: none;
+}
+
 form:valid {
-    background-color: green;
+    background-image: url(./images/celebration.gif);
+}
+
+.doelwit-1:valid + span {
+    background-color: var(--valid);
+    display: block;
 }
 
 .doelwit-1 {
@@ -64,9 +77,9 @@ form:valid {
 }
 
 @keyframes doelwit-1 {
-    0% {transform: translateX(0%);}
-    50% {transform: translateX(100%);}
-    100% {transform: translateX(0%);}
+    0% {transform: translate(0%, 600%);}
+    50% {transform: translate(100%, 0%);}
+    100% {transform: translate(0%, 600%);}
 }
 
 .doelwit-2 {
@@ -74,7 +87,7 @@ form:valid {
 }
 
 @keyframes doelwit-2 {
-    0% {transform: translate(20rem, -20rem);}
+    0% {transform: translate(20%, -20%);}
     50% {transform: translate(100%, 80%);}
     100% {transform: translate(0%, 20%);}
 }
