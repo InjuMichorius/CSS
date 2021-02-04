@@ -16,12 +16,11 @@
 
 body{
     background-color: var(--secondary);
-    overflow-x: hidden;
+    overflow: hidden;
 }
 
 header nav {
     background-color: var(--primary);
-    margin-bottom: 1rem;
 }
 
 header nav ul {
