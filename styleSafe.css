@@ -19,12 +19,30 @@ body{
     overflow-x: hidden;
 }
 
-header {
-    width: 100%;
-    text-align: center;
+header nav {
     background-color: var(--primary);
-    color: var(--primary-text);
-    padding: 1rem 0;
+    margin-bottom: 1rem;
+}
+
+header nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+}
+
+header nav a {
+    display: block;
+    padding: 0.5rem 0.5rem;
+    color: white;
+    background-color: var(--primary);
+    font-weight: bold;
+    text-decoration: none;
+    line-height: 6.2rem;
+    transition: .3s;
+}
+
+header nav a.active, header nav a:hover {
+    background-color: var(--secondary);
 }
 
 label{
