@@ -1,0 +1,45 @@
+body {
+    background-color: aquamarine;
+}
+
+img {
+    display: block;
+    margin: auto;
+    animation: dropDown 10s ease-in-out 2s infinite;
+}
+
+@keyframes dropDown {
+    0%{
+        transform: translateY(0%);
+    }
+    10% {
+        transform: translateY(200%);
+    }
+    20% {
+        transform: translateY(150%);
+    }
+    30% {
+        transform: translateY(200%);
+    }
+    40% {
+        transform: translateY(180%);
+    }
+    50% {
+        transform: translateY(200%);
+    }
+    60% {
+        transform: translateY(0%);
+    }
+    70% {
+        transform: translateY(0%);
+    }
+    80% {
+        transform: translateY(0%);
+    }
+    90% {
+        transform: translateY(0%);
+    }
+    100% {
+        transform: translateY(0%);
+    }
+}
