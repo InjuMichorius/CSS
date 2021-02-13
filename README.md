@@ -9,8 +9,5 @@ I decided to choose the CSS-garden assignment, inspired by [CSS Zen Garden](http
 For this week I want to experiment with shapes and animation. I chose the following poster and I want to make the sun rotate slowly. I also want the hangingman to fall down. Making shapes will be my biggest challenge, because I've never used this technique before.
 ![Images of the poster I re-created into a food menu site](https://github.com/InjuMichorius/CSS-Garden/blob/master/images/README%20images/week1.jpg)
 
-Welke opdracht ga je doen en voor welke opties kies je qua uitwerking.
-Met welke CSS-technieken ga je als eerste aan de slag.
-Waar liggen je (grootste) uitdagingen.
-Neem schets(en) van je ontwerp op.
-Maak wellicht ook al een eerste breakdown-schets.
+## Week 2
+filler
