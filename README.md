@@ -14,6 +14,8 @@ This week I worked on shapes and animation. I decided that I wanted to work on t
 
 ![GIF of a sun rotating, and a man that hung himself](https://github.com/InjuMichorius/CSS-Garden/blob/master/images/README%20images/AnimationsWeek2.gif)
 
+I've also tried to recreate the arch of text. I used [this site](https://css-tricks.com/snippets/svg/curved-text-along-path/) to help me with this, but I haven't figured out why this doesn't work for me (yet).
+
 Laat je voortgang zien ('praatje met plaatjes').
 Wat ging er soepel en wat was lastig.
 Welke experimenten heb je gedaan die die 'mislukt' zijn.
