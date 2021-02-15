@@ -14,16 +14,9 @@ This week I worked further on __shapes__ and __animation__. I decided I wanted t
 
 ![GIF of a sun rotating, and a man that hung himself](https://github.com/InjuMichorius/CSS-Garden/blob/master/images/README%20images/AnimationsWeek2.gif)
 
-I've also tried to recreate the __arch of text__. I used [this site](https://css-tricks.com/snippets/svg/curved-text-along-path/) to help me, but I haven't figured out why this doesn't work for me (yet). I think the solution is changing the __width__ and __font-size__.
+I've also tried to recreate the __arch of text__. I used [this site](https://css-tricks.com/snippets/svg/curved-text-along-path/) to help me, but I haven't figured out why this doesn't work for me (yet). I think the solution is changing the __width__ and/or __font-size__.
 
 ![Image of an arch of text, using CSS properties path and textpath](https://github.com/InjuMichorius/CSS-Garden/blob/master/images/README%20images/archOfTextWeek2.JPG)
-
-Laat je voortgang zien ('praatje met plaatjes').
-Wat ging er soepel en wat was lastig.
-Welke experimenten heb je gedaan die die 'mislukt' zijn.
-Heb je nieuwe inzichten hoe je de kracht CSS kunt benutten (of juist niet).
-Neem wijzigingen aan je 1e plan op.
-Waar liggen je (nieuwe) uitdagingen voor komende week.
 
 ## Week 3
 Laat je voortgang zien ('praatje met plaatjes').
