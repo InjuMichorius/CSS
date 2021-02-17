@@ -13,6 +13,17 @@ body {
     overflow-x: hidden;
 }
 
+header {
+    background-color: white;
+    z-index: 100;
+}
+
+header h1 {
+    text-align: center;
+    font-size: 10rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
 section {
     position: relative;
 }
@@ -69,68 +80,46 @@ section {
     }
 }
 
-.outer-sun::before {
-    content: "";
-    position: absolute;
-    top: -10vw;
-    left: -10vw;
-    width: 120vw;
-    height: 120vw;
-    background: radial-gradient(closest-side, transparent 0%, transparent 50% white 100%), conic-gradient(transparent 0deg, yellow 10deg 25deg, transparent 35deg 55deg, yellow 65deg 85deg, transparent 95deg 115deg, yellow 125deg 145deg, transparent 155deg 175deg, yellow 185deg 205deg, transparent 215deg 235deg, yellow 245deg 265deg, transparent 247deg 295deg, yellow 305deg 325deg, transparent 335deg);
-    animation: sunlight 15s linear infinite;
-    mix-blend-mode: screen;
-}
-
-.outer-sun::after {
-    content: "";
-    position: absolute;
-    top: -10vw;
-    left: -10vw;
-    width: 120vw;
-    height: 120vw;
-    background: radial-gradient(closest-side, transparent 0%, transparent 70% white 100%), conic-gradient(transparent 0deg, orange 10deg 25deg, transparent 35deg 55deg, orange 65deg 85deg, transparent 95deg 115deg, orange 125deg 145deg, transparent 155deg 175deg, orange 185deg 205deg, transparent 215deg 235deg, orange 245deg 265deg, transparent 275deg 295deg, orange 305deg);
-}
-
 .hanging-man {
     display: block;
     margin: auto;
-    transform: translateY(-100%);
+    transform: translateY(-130%);
+    z-index: -1;
     animation: dropDown 10s ease-in-out 2s;
-    z-index: 100;
 }
 
 @keyframes dropDown {
     0% {
-        transform: translateY(-100%);
+        transform: translateY(-130%);
     }
     10% {
-        transform: translateY(-30%);
+        transform: translateY(-50%);
     }
     20% {
-        transform: translateY(-40%);
+        transform: translateY(-60%);
     }
     30% {
-        transform: translateY(-30%);
+        transform: translateY(-50%);
     }
     40% {
-        transform: translateY(-37%);
+        transform: translateY(-57%);
     }
     50% {
-        transform: translateY(-30%);
+        transform: translateY(-50%);
     }
     60% {
-        transform: translateY(-35%);
+        transform: translateY(-55%);
     }
     70% {
-        transform: translateY(-30%);
+        transform: translateY(-50%);
     }
     80% {
-        transform: translateY(-33%);
+        transform: translateY(-53%);
     }
     90% {
-        transform: translateY(-30%);
+        transform: translateY(-50%);
     }
     100% {
-        transform: translateY(-100%);
+        transform: translateY(-130%);
     }
 }
