@@ -4,51 +4,58 @@
     box-sizing: border-box;
 }
 
-:root{
+:root {
     --blue: #586598;
     --red: #E34445;
 }
 
+body {
+    overflow-x: hidden;
+}
+
 section {
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-}
-
-.overlay {
-	position: relative;
-	overflow: hidden;
-	width: 100vw;
-	height: 100vh;
-}
-.overlay::after {
-	content: "";
-	position: absolute;
-	width: 300%;
-	height: 300%;
-	top: -25%;
-	left: -100%;
-	background: radial-gradient(ellipse at center, rgba(255,0,0,0) 0%,rgba(255,0,0,0) 50%,rgba(255,0,0,1) 50%,rgba(255,0,0,1) 100%);
-}
-
-.outer-sun{
-    --aantalTaartpunten: 12;
-
     position: relative;
+}
+
+.top-dishes {
     width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    bottom: 0;
+}
+
+.top-dishes article img{
+    width: 20rem;
+    filter: grayscale(100%);
+}
+
+.inner-sun {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--red);
+    height: 8rem;
+    width: 8rem;
+    border-radius: 50%;
+}
+
+
+.outer-sun {
+    --aantalTaartpunten: 12;
+    position: relative;
+    width: 140vw;
     height: 100vw;
     display: flex;
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    background: 
-    conic-gradient(var(--red) calc(360deg / var(--aantalTaartpunten) * 0), #586598 10deg, 25deg, var(--red) 35deg 55deg, 
-    var(--blue) 65deg 85deg, var(--red) 95deg 115deg, var(--blue) 125deg 145deg,
-    var(--red) 155deg 175deg, var(--blue) 185deg 205deg, var(--red) 215deg 235deg, 
-    var(--blue) 245deg, 265deg, var(--red) 275deg 295deg, var(--blue) 305deg 325deg, 
-    var(--red) 335deg);
+    background: conic-gradient(var(--red) calc(360deg / var(--aantalTaartpunten) * 0),
+    #586598 10deg, 25deg, var(--red) 35deg 55deg, var(--blue) 65deg 85deg,
+    var(--red) 95deg 115deg, var(--blue) 125deg 145deg, var(--red) 155deg 175deg,
+    var(--blue) 185deg 205deg, var(--red) 215deg 235deg, var(--blue) 245deg, 265deg,
+    var(--red) 275deg 295deg, var(--blue) 305deg 325deg, var(--red) 335deg);
     z-index: -1;
     animation: rotate 15s linear infinite;
 }
@@ -62,82 +69,68 @@ section {
     }
 }
 
-.outer-sun::before{
+.outer-sun::before {
     content: "";
     position: absolute;
     top: -10vw;
     left: -10vw;
     width: 120vw;
     height: 120vw;
-    background:
-    radial-gradient(closest-side, transparent 0%, transparent 50% white 100%),
-    conic-gradient(transparent 0deg, yellow 10deg 25deg, transparent 35deg 55deg,
-    yellow 65deg 85deg, transparent 95deg 115deg, yellow 125deg 145deg,
-    transparent 155deg 175deg, yellow 185deg 205deg, transparent 215deg 235deg,
-    yellow 245deg 265deg, transparent 247deg 295deg, yellow 305deg 325deg,
-    transparent 335deg);
+    background: radial-gradient(closest-side, transparent 0%, transparent 50% white 100%), conic-gradient(transparent 0deg, yellow 10deg 25deg, transparent 35deg 55deg, yellow 65deg 85deg, transparent 95deg 115deg, yellow 125deg 145deg, transparent 155deg 175deg, yellow 185deg 205deg, transparent 215deg 235deg, yellow 245deg 265deg, transparent 247deg 295deg, yellow 305deg 325deg, transparent 335deg);
     animation: sunlight 15s linear infinite;
     mix-blend-mode: screen;
 }
 
-.outer-sun::after{
+.outer-sun::after {
     content: "";
     position: absolute;
     top: -10vw;
     left: -10vw;
     width: 120vw;
     height: 120vw;
-    background: 
-    radial-gradient(closest-side, transparent 0%, transparent 70% white 100%),
-    conic-gradient(transparent 0deg, orange 10deg 25deg, transparent 35deg 55deg,
-    orange 65deg 85deg, transparent 95deg 115deg, orange 125deg 145deg,
-    transparent 155deg 175deg, orange 185deg 205deg, transparent 215deg 235deg,
-    orange 245deg 265deg, transparent 275deg 295deg, orange 305deg);
+    background: radial-gradient(closest-side, transparent 0%, transparent 70% white 100%), conic-gradient(transparent 0deg, orange 10deg 25deg, transparent 35deg 55deg, orange 65deg 85deg, transparent 95deg 115deg, orange 125deg 145deg, transparent 155deg 175deg, orange 185deg 205deg, transparent 215deg 235deg, orange 245deg 265deg, transparent 275deg 295deg, orange 305deg);
 }
 
-
-
-
-
-img {
+.hanging-man {
     display: block;
     margin: auto;
-    animation: dropDown 10s ease-in-out 2s infinite;
+    transform: translateY(-100%);
+    animation: dropDown 10s ease-in-out 2s;
     z-index: 100;
 }
 
 @keyframes dropDown {
-    0%{
-        transform: translateY(0%);
+    0% {
+        transform: translateY(-100%);
     }
     10% {
-        transform: translateY(200%);
+        transform: translateY(-30%);
     }
     20% {
-        transform: translateY(150%);
+        transform: translateY(-40%);
     }
     30% {
-        transform: translateY(200%);
+        transform: translateY(-30%);
     }
     40% {
-        transform: translateY(180%);
+        transform: translateY(-37%);
     }
     50% {
-        transform: translateY(200%);
+        transform: translateY(-30%);
     }
     60% {
-        transform: translateY(0%);
+        transform: translateY(-35%);
     }
     70% {
-        transform: translateY(0%);
+        transform: translateY(-30%);
     }
     80% {
-        transform: translateY(0%);
+        transform: translateY(-33%);
     }
     90% {
-        transform: translateY(0%);
+        transform: translateY(-30%);
     }
     100% {
-        transform: translateY(0%);
+        transform: translateY(-100%);
     }
 }
