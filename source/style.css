@@ -11,9 +11,12 @@
 
 body {
     overflow-x: hidden;
+    border: 1.5rem #e4bd34;
+    border-style: groove;
 }
 
 header {
+    height: 25vh;
     background-color: white;
     z-index: 100;
 }
@@ -24,21 +27,61 @@ header h1 {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-section {
-    position: relative;
-}
-
-.top-dishes {
+section.dishes {
     width: 100vw;
     display: flex;
     justify-content: space-between;
-    position: fixed;
-    bottom: 0;
+    flex-wrap: wrap;
 }
 
-.top-dishes article img{
-    width: 20rem;
-    filter: grayscale(100%);
+section.dishes article {
+    position: relative;
+    width: 320px;
+    background: violet;
+    padding: 100px 40px 60px;
+    box-shadow: 0 15px 45px rgba(0,0,0,.1);
+}
+
+section.dishes article::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: conic-gradient(var(--red) 0deg, var(--blue) 10deg, 25deg, var(--red) 35deg 55deg, var(--blue) 65deg 85deg, var(--red) 95deg 115deg, var(--blue) 125deg 145deg, var(--red) 155deg 175deg, var(--blue) 185deg 205deg, var(--red) 215deg 235deg, var(--blue) 245deg, 265deg, var(--red) 275deg 295deg, var(--blue) 305deg 325deg, var(--red) 335deg);
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 0.5s;
+}
+
+section.dishes article:hover::before {
+    transform: scaleY(1);
+    transform-origin: bottom;
+    transition: transform 0.5s;
+}
+
+section.dishes article:hover h2 {
+    position: relative;
+    font-size: 1.5em;
+    z-index: 2;
+    color: #fff;
+}
+
+.section.dishes article:hover h4 {
+    position: relative;
+    font-size: 1.5em;
+    z-index: 1000;
+    color: #fff;
+}
+
+.sun {
+    position: relative;
+    height: 75vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
 }
 
 .inner-sun {
@@ -50,25 +93,21 @@ section {
     height: 8rem;
     width: 8rem;
     border-radius: 50%;
+    z-index: -100;
 }
-
 
 .outer-sun {
     --aantalTaartpunten: 12;
     position: relative;
-    width: 140vw;
-    height: 100vw;
+    width: 120vw;
+    height: 120vw;
     display: flex;
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    background: conic-gradient(var(--red) calc(360deg / var(--aantalTaartpunten) * 0),
-    #586598 10deg, 25deg, var(--red) 35deg 55deg, var(--blue) 65deg 85deg,
-    var(--red) 95deg 115deg, var(--blue) 125deg 145deg, var(--red) 155deg 175deg,
-    var(--blue) 185deg 205deg, var(--red) 215deg 235deg, var(--blue) 245deg, 265deg,
-    var(--red) 275deg 295deg, var(--blue) 305deg 325deg, var(--red) 335deg);
-    z-index: -1;
-    animation: rotate 15s linear infinite;
+    background: conic-gradient(var(--red) 0deg, var(--blue) 10deg, 25deg, var(--red) 35deg 55deg, var(--blue) 65deg 85deg, var(--red) 95deg 115deg, var(--blue) 125deg 145deg, var(--red) 155deg 175deg, var(--blue) 185deg 205deg, var(--red) 215deg 235deg, var(--blue) 245deg, 265deg, var(--red) 275deg 295deg, var(--blue) 305deg 325deg, var(--red) 335deg);
+    z-index: -100;
+    animation: rotate 40s linear infinite;
 }
 
 @keyframes rotate {
@@ -81,8 +120,8 @@ section {
 }
 
 .hanging-man {
-    display: block;
-    margin: auto;
+    position: fixed;
+    left: 50%;
     transform: translateY(-130%);
     z-index: -1;
     animation: dropDown 10s ease-in-out 2s;
