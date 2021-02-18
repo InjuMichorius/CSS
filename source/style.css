@@ -12,27 +12,29 @@
 body {
     overflow-x: hidden;
     /* border: 1.5rem  #e4bd34; */
-    border-top: 1.5rem #e4bd34;
     border-left: 1.5rem #e4bd34;
     border-bottom: 1.5rem #e4bd34;
     border-style: groove;
 }
 
 header {
-    position: relative;
+    position: fixed;
 	overflow: hidden;
     width: 100vw;
-    height: 25vh;
+    height: 100vh;
     background-color: white;
-    z-index: 100;
+    z-index: -1;
     font-family: 'Lora', serif;
 }
 
 header h2 {
     text-align: center;
+    width: 100vw;
+
 }
 
 header h1 {
+    width: 100vw;
     text-align: center;
     font-size: 10rem;
 }
@@ -94,12 +96,11 @@ section.dishes article:hover p {
 
 .sun {
     position: relative;
-    height: 75vh;
+    height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    cursor: url('/images/strop.png'), auto;
 }
 
 .inner-sun {
@@ -107,15 +108,14 @@ section.dishes article:hover p {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: var(--red);
     height: 8rem;
     width: 8rem;
     border-radius: 50%;
+    background: radial-gradient(circle at 65% 15%, white 1px, orange 3%, var(--red) 60%, orange 100%); 
     z-index: -100;
 }
 
 .outer-sun {
-    --aantalTaartpunten: 12;
     position: absolute;
     width: 120vw;
     height: 120vw;
@@ -123,9 +123,45 @@ section.dishes article:hover p {
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    background: conic-gradient(var(--red) 0deg, var(--blue) 10deg, 25deg, var(--red) 35deg 55deg, var(--blue) 65deg 85deg, var(--red) 95deg 115deg, var(--blue) 125deg 145deg, var(--red) 155deg 175deg, var(--blue) 185deg 205deg, var(--red) 215deg 235deg, var(--blue) 245deg, 265deg, var(--red) 275deg 295deg, var(--blue) 305deg 325deg, var(--red) 335deg);
+    background: 
+    radial-gradient(closest-side, var(--red) 0%, transparent 50%, var(--blue) 100%),
+    conic-gradient(var(--red) 0deg, var(--blue) 10deg, 25deg, var(--red) 35deg 55deg, var(--blue) 65deg 85deg, var(--red) 95deg 115deg, var(--blue) 125deg 145deg, var(--red) 155deg 175deg, var(--blue) 185deg 205deg, var(--red) 215deg 235deg, var(--blue) 245deg, 265deg, var(--red) 275deg 295deg, var(--blue) 305deg 325deg, var(--red) 335deg);
     z-index: -100;
     animation: rotate 40s linear infinite;
+}
+
+.outer-sun::before {
+    content: "";
+    position: absolute;
+    width: 120vw;
+    height: 120vw;
+    background: radial-gradient(closest-side, transparent 0%,
+    transparent 50%, var(--blue) 100%), conic-gradient(transparent 0deg,
+    yellow 10deg 25deg, transparent 35deg 55deg, yellow 65deg
+    85deg, transparent 95deg 115deg, yellow 125deg 145deg,
+    transparent 155deg 175deg, yellow 185deg 205deg,
+    transparent 215deg 235deg, yellow 245deg 265deg,
+    transparent 247deg 295deg, yellow 305deg 325deg,
+    transparent 335deg);
+    animation: rotate 40s linear infinite;
+    mix-blend-mode: screen;
+}
+
+.outer-sun::after{
+    content: "";
+    position: absolute;
+    width: 120vw;
+    height: 120vw;
+    background: radial-gradient(closest-side, transparent 0%,
+    transparent 50%, var(--blue) 100%), conic-gradient(transparent 0deg,
+    orange 10deg 25deg, transparent 35deg 55deg, orange 65deg
+    85deg, transparent 95deg 115deg, orange 125deg 145deg,
+    transparent 155deg 175deg, orange 185deg 205deg,
+    transparent 215deg 235deg, orange 245deg 265deg,
+    transparent 275deg 295deg, orange 305deg 325deg,
+    transparent 335deg);
+    animation: rotate 40s linear infinite;
+    mix-blend-mode: screen;
 }
 
 @keyframes rotate {
@@ -181,6 +217,14 @@ section.dishes article:hover p {
     }
 }
 
+main {
+    margin-top: 100vh;
+    background-color: salmon;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1000;
+}
+
 ::selection {
     color: var(--red);
     background-color: var(--blue);
@@ -189,7 +233,7 @@ section.dishes article:hover p {
 /* width */
 
 ::-webkit-scrollbar {
-    width: 20px;
+    width: 1.5rem;
 }
 
 /* Track */
