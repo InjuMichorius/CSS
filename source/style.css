@@ -11,14 +11,21 @@
 
 body {
     overflow-x: hidden;
-    border: 1.5rem #e4bd34;
+    /* border: 1.5rem  #e4bd34; */
+    border-top: 1.5rem #e4bd34;
+    border-left: 1.5rem #e4bd34;
+    border-bottom: 1.5rem #e4bd34;
     border-style: groove;
 }
 
 header {
+    position: relative;
+	overflow: hidden;
+    width: 100vw;
     height: 25vh;
     background-color: white;
     z-index: 100;
+    font-family: 'Lora', serif;
 }
 
 header h2 {
@@ -28,7 +35,6 @@ header h2 {
 header h1 {
     text-align: center;
     font-size: 10rem;
-    font-family: Arial, Helvetica, sans-serif;
 }
 
 section.dishes {
@@ -43,7 +49,7 @@ section.dishes article {
     width: 320px;
     background: violet;
     padding: 100px 40px 60px;
-    box-shadow: 0 15px 45px rgba(0,0,0,.1);
+    box-shadow: 0 15px 45px rgba(0, 0, 0, .1);
 }
 
 section.dishes article::before {
@@ -93,6 +99,7 @@ section.dishes article:hover p {
     align-items: center;
     justify-content: center;
     overflow: hidden;
+    cursor: url('/images/strop.png'), auto;
 }
 
 .inner-sun {
@@ -172,4 +179,34 @@ section.dishes article:hover p {
     100% {
         transform: translateY(-130%);
     }
+}
+
+::selection {
+    color: var(--red);
+    background-color: var(--blue);
+}
+
+/* width */
+
+::-webkit-scrollbar {
+    width: 20px;
+}
+
+/* Track */
+
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px #e4bd34;
+    background: #D3AD30;
+}
+
+/* Handle */
+
+::-webkit-scrollbar-thumb {
+    background: #e4bd34;
+}
+
+/* Handle on hover */
+
+::-webkit-scrollbar-thumb:hover {
+    background: #907720;
 }
