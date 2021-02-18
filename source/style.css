@@ -21,6 +21,10 @@ header {
     z-index: 100;
 }
 
+header h2 {
+    text-align: center;
+}
+
 header h1 {
     text-align: center;
     font-size: 10rem;
@@ -61,14 +65,21 @@ section.dishes article:hover::before {
     transition: transform 0.5s;
 }
 
-section.dishes article:hover h2 {
+section.dishes article:hover h3 {
     position: relative;
     font-size: 1.5em;
     z-index: 2;
     color: #fff;
 }
 
-.section.dishes article:hover h4 {
+section.dishes article:hover span {
+    position: relative;
+    font-size: 1.5em;
+    z-index: 1000;
+    color: #fff;
+}
+
+section.dishes article:hover p {
     position: relative;
     font-size: 1.5em;
     z-index: 1000;
@@ -98,7 +109,7 @@ section.dishes article:hover h2 {
 
 .outer-sun {
     --aantalTaartpunten: 12;
-    position: relative;
+    position: absolute;
     width: 120vw;
     height: 120vw;
     display: flex;
