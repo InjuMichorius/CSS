@@ -6,7 +6,7 @@
 
 :root {
     --blue: #586598;
-    --red: #E34445;
+    --red: #DE4846;
 }
 
 body {
@@ -111,7 +111,7 @@ section.dishes article:hover p {
     height: 8rem;
     width: 8rem;
     border-radius: 50%;
-    background: radial-gradient(circle at 65% 15%, white 1px, orange 3%, var(--red) 60%, orange 100%); 
+    background: radial-gradient(circle at 65% 15%, white 1px, var(--red) 3%, orange 60%, var(--red) 100%); 
     z-index: -100;
 }
 
@@ -137,11 +137,11 @@ section.dishes article:hover p {
     height: 120vw;
     background: radial-gradient(closest-side, transparent 0%,
     transparent 50%, var(--blue) 100%), conic-gradient(transparent 0deg,
-    yellow 10deg 25deg, transparent 35deg 55deg, yellow 65deg
-    85deg, transparent 95deg 115deg, yellow 125deg 145deg,
-    transparent 155deg 175deg, yellow 185deg 205deg,
-    transparent 215deg 235deg, yellow 245deg 265deg,
-    transparent 247deg 295deg, yellow 305deg 325deg,
+    var(--red) 10deg 25deg, transparent 35deg 55deg, var(--red) 65deg
+    85deg, transparent 95deg 115deg, var(--red) 125deg 145deg,
+    transparent 155deg 175deg, var(--red) 185deg 205deg,
+    transparent 215deg 235deg, var(--red) 245deg 265deg,
+    transparent 247deg 295deg, var(--red) 305deg 325deg,
     transparent 335deg);
     animation: rotate 40s linear infinite;
     mix-blend-mode: screen;
