@@ -7,19 +7,20 @@
 :root {
     --blue: #586598;
     --red: #DE4846;
+    --gold: #e4bd34;
+    --neptune: #419BB1;
 }
 
 body {
     overflow-x: hidden;
-    /* border: 1.5rem  #e4bd34; */
-    border-left: 1.5rem #e4bd34;
-    border-bottom: 1.5rem #e4bd34;
     border-style: groove;
 }
 
+/* Landing screen styling */
+
 header {
     position: fixed;
-	overflow: hidden;
+    overflow: hidden;
     width: 100vw;
     height: 100vh;
     background-color: white;
@@ -30,7 +31,6 @@ header {
 header h2 {
     text-align: center;
     width: 100vw;
-
 }
 
 header h1 {
@@ -39,61 +39,7 @@ header h1 {
     font-size: 10rem;
 }
 
-section.dishes {
-    width: 100vw;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
-
-section.dishes article {
-    position: relative;
-    width: 320px;
-    background: violet;
-    padding: 100px 40px 60px;
-    box-shadow: 0 15px 45px rgba(0, 0, 0, .1);
-}
-
-section.dishes article::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: conic-gradient(var(--red) 0deg, var(--blue) 10deg, 25deg, var(--red) 35deg 55deg, var(--blue) 65deg 85deg, var(--red) 95deg 115deg, var(--blue) 125deg 145deg, var(--red) 155deg 175deg, var(--blue) 185deg 205deg, var(--red) 215deg 235deg, var(--blue) 245deg, 265deg, var(--red) 275deg 295deg, var(--blue) 305deg 325deg, var(--red) 335deg);
-    transform: scaleY(0);
-    transform-origin: top;
-    transition: transform 0.5s;
-}
-
-section.dishes article:hover::before {
-    transform: scaleY(1);
-    transform-origin: bottom;
-    transition: transform 0.5s;
-}
-
-section.dishes article:hover h3 {
-    position: relative;
-    font-size: 1.5em;
-    z-index: 2;
-    color: #fff;
-}
-
-section.dishes article:hover span {
-    position: relative;
-    font-size: 1.5em;
-    z-index: 1000;
-    color: #fff;
-}
-
-section.dishes article:hover p {
-    position: relative;
-    font-size: 1.5em;
-    z-index: 1000;
-    color: #fff;
-}
-
+/* Styling and animating sun */
 .sun {
     position: relative;
     height: 100vh;
@@ -111,8 +57,7 @@ section.dishes article:hover p {
     height: 8rem;
     width: 8rem;
     border-radius: 50%;
-    background: radial-gradient(circle at 65% 15%, white 1px, var(--red) 3%, orange 60%, var(--red) 100%); 
-    z-index: -100;
+    background: radial-gradient(circle at 65% 15%, white 1px, var(--red) 3%, orange 60%, var(--red) 100%);
 }
 
 .outer-sun {
@@ -123,9 +68,7 @@ section.dishes article:hover p {
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    background: 
-    radial-gradient(closest-side, var(--red) 0%, transparent 50%, var(--blue) 100%),
-    conic-gradient(var(--red) 0deg, var(--blue) 10deg, 25deg, var(--red) 35deg 55deg, var(--blue) 65deg 85deg, var(--red) 95deg 115deg, var(--blue) 125deg 145deg, var(--red) 155deg 175deg, var(--blue) 185deg 205deg, var(--red) 215deg 235deg, var(--blue) 245deg, 265deg, var(--red) 275deg 295deg, var(--blue) 305deg 325deg, var(--red) 335deg);
+    background: radial-gradient(closest-side, var(--red) 0%, transparent 50%, var(--blue) 100%), conic-gradient(var(--red) 0deg, var(--blue) 10deg, 25deg, var(--red) 35deg 55deg, var(--blue) 65deg 85deg, var(--red) 95deg 115deg, var(--blue) 125deg 145deg, var(--red) 155deg 175deg, var(--blue) 185deg 205deg, var(--red) 215deg 235deg, var(--blue) 245deg, 265deg, var(--red) 275deg 295deg, var(--blue) 305deg 325deg, var(--red) 335deg);
     z-index: -100;
     animation: rotate 40s linear infinite;
 }
@@ -135,50 +78,34 @@ section.dishes article:hover p {
     position: absolute;
     width: 120vw;
     height: 120vw;
-    background: radial-gradient(closest-side, transparent 0%,
-    transparent 50%, var(--blue) 100%), conic-gradient(transparent 0deg,
-    var(--red) 10deg 25deg, transparent 35deg 55deg, var(--red) 65deg
-    85deg, transparent 95deg 115deg, var(--red) 125deg 145deg,
-    transparent 155deg 175deg, var(--red) 185deg 205deg,
-    transparent 215deg 235deg, var(--red) 245deg 265deg,
-    transparent 247deg 295deg, var(--red) 305deg 325deg,
-    transparent 335deg);
+    background: radial-gradient(closest-side, transparent 0%, transparent 50%, var(--blue) 100%), conic-gradient(transparent 0deg, var(--red) 10deg 25deg, transparent 35deg 55deg, var(--red) 65deg 85deg, transparent 95deg 115deg, var(--red) 125deg 145deg, transparent 155deg 175deg, var(--red) 185deg 205deg, transparent 215deg 235deg, var(--red) 245deg 265deg, transparent 247deg 295deg, var(--red) 305deg 325deg, transparent 335deg);
     animation: rotate 40s linear infinite;
     mix-blend-mode: screen;
 }
 
-.outer-sun::after{
+.outer-sun::after {
     content: "";
     position: absolute;
     width: 120vw;
     height: 120vw;
-    background: radial-gradient(closest-side, transparent 0%,
-    transparent 50%, var(--blue) 100%), conic-gradient(transparent 0deg,
-    orange 10deg 25deg, transparent 35deg 55deg, orange 65deg
-    85deg, transparent 95deg 115deg, orange 125deg 145deg,
-    transparent 155deg 175deg, orange 185deg 205deg,
-    transparent 215deg 235deg, orange 245deg 265deg,
-    transparent 275deg 295deg, orange 305deg 325deg,
-    transparent 335deg);
+    background: radial-gradient(closest-side, transparent 0%, transparent 50%, var(--blue) 100%), conic-gradient(transparent 0deg, orange 10deg 25deg, transparent 35deg 55deg, orange 65deg 85deg, transparent 95deg 115deg, orange 125deg 145deg, transparent 155deg 175deg, orange 185deg 205deg, transparent 215deg 235deg, orange 245deg 265deg, transparent 275deg 295deg, orange 305deg 325deg, transparent 335deg);
     animation: rotate 40s linear infinite;
     mix-blend-mode: screen;
 }
 
 @keyframes rotate {
-    from {
-        transform: rotate(0deg);
-    }
     to {
         transform: rotate(360deg);
     }
 }
 
+/* Styling and animating hanging man */
 .hanging-man {
     position: fixed;
     left: 50%;
     transform: translateY(-130%);
     z-index: -1;
-    animation: dropDown 10s ease-in-out 2s;
+    animation: dropDown 10s ease-in-out;
 }
 
 @keyframes dropDown {
@@ -218,10 +145,74 @@ section.dishes article:hover p {
 }
 
 main {
+    position: absolute;
     margin-top: 100vh;
-    background-color: salmon;
+    padding-top: 10rem;
     width: 100vw;
     height: 100vh;
+    z-index: 1000;
+    animation: mainUp 2s ease 10s 1 normal forwards;
+}
+
+@keyframes mainUp {
+    to {
+        margin-top: 0vh;
+    }
+}
+
+/* Dishes styling */
+section.dishes {
+    width: 70vw;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+section.dishes article {
+    position: relative;
+    width: 20rem;
+    height: 25rem;
+    background: conic-gradient(var(--red) 0deg, var(--blue) 10deg, 25deg, var(--red) 35deg 55deg, var(--blue) 65deg 85deg, var(--red) 95deg 115deg, var(--blue) 125deg 145deg, var(--red) 155deg 175deg, var(--blue) 185deg 205deg, var(--red) 215deg 235deg, var(--blue) 245deg, 265deg, var(--red) 275deg 295deg, var(--blue) 305deg 325deg, var(--red) 335deg);
+    padding: 100px 40px 60px;
+    color: white;
+    border: 1rem groove #e4bd34;
+}
+
+section.dishes article::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: scaleY(0);
+    transform-origin: top;
+    background-image: url("./images/zalm.png");
+    transition: transform 0.5s;
+}
+
+section.dishes article:hover::before {
+    transform: scaleY(1);
+    transform-origin: bottom;
+    transition: transform 0.5s;
+}
+
+section.dishes article:hover h3 {
+    position: relative;
+    font-size: 1.5em;
+    z-index: 2;
+}
+
+section.dishes article:hover span {
+    position: relative;
+    font-size: 1.5em;
+    z-index: 1000;
+}
+
+section.dishes article:hover p {
+    position: relative;
+    font-size: 1.5em;
     z-index: 1000;
 }
 
@@ -233,6 +224,7 @@ main {
 /* width */
 
 ::-webkit-scrollbar {
+    display: none;
     width: 1.5rem;
 }
 
