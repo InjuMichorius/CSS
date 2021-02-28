@@ -162,6 +162,7 @@ main {
 
 /* Dishes styling */
 section.dishes {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     width: 70vw;
     margin: auto;
     display: flex;
@@ -187,32 +188,54 @@ section.dishes article::before {
     width: 100%;
     height: 100%;
     transform: scaleY(0);
-    transform-origin: top;
-    background-image: url("./images/zalm.png");
+    transform-origin: bottom;
+    background-image: url("/images/zalm.png");
     transition: transform 0.5s;
 }
 
 section.dishes article:hover::before {
+    cursor: grab;
     transform: scaleY(1);
     transform-origin: bottom;
     transition: transform 0.5s;
 }
 
+section.dishes article span {
+    margin-bottom: 1rem;
+    display: block;
+    text-align: center;
+}
+
+section.dishes article:hover span {
+    position: absolute;
+    text-align: left;
+    font-size: 3rem;
+    top: 40px;
+    font-weight: 800;
+    z-index: 1000;
+}
+
+section.dishes article h3 {
+    text-align: center;
+}
+
 section.dishes article:hover h3 {
-    position: relative;
+    position: absolute;
+    text-align: left;
     font-size: 1.5em;
     z-index: 2;
 }
 
-section.dishes article:hover span {
-    position: relative;
-    font-size: 1.5em;
-    z-index: 1000;
+section.dishes article p {
+    display: none;
 }
 
 section.dishes article:hover p {
-    position: relative;
-    font-size: 1.5em;
+    display: block;
+    position: absolute;
+    font-size: 1rem;
+    top: 10rem;
+    max-width: 15rem;
     z-index: 1000;
 }
 
