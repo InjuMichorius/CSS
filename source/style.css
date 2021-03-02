@@ -105,7 +105,7 @@ header h1 {
     left: 50%;
     transform: translateY(-130%);
     z-index: -1;
-    animation: dropDown 10s ease-in-out;
+    animation: dropDown 5s ease-in-out;
 }
 
 @keyframes dropDown {
@@ -147,11 +147,26 @@ header h1 {
 main {
     position: absolute;
     margin-top: 100vh;
-    padding-top: 10rem;
     width: 100vw;
     height: 100vh;
     z-index: 1000;
-    animation: mainUp 2s ease 10s 1 normal forwards;
+    animation: mainUp 2s ease 5s 1 normal forwards;
+}
+
+.main-sun {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    animation: mainUp 2s ease 5s 1 normal forwards;
+}
+
+.test {
+    --red: purple;
 }
 
 @keyframes mainUp {
@@ -164,40 +179,36 @@ main {
 section.dishes {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     width: 70vw;
-    margin: auto;
+    margin: 5rem auto;
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
+    z-index: 1000;
+}
+
+section.dishes:hover article {
+    filter: blur(3px);
+    opacity: 0.5;
+    transform: scale(0.9);
+    box-shadow: none;
 }
 
 section.dishes article {
     position: relative;
     width: 20rem;
     height: 25rem;
-    background: conic-gradient(var(--red) 0deg, var(--blue) 10deg, 25deg, var(--red) 35deg 55deg, var(--blue) 65deg 85deg, var(--red) 95deg 115deg, var(--blue) 125deg 145deg, var(--red) 155deg 175deg, var(--blue) 185deg 205deg, var(--red) 215deg 235deg, var(--blue) 245deg, 265deg, var(--red) 275deg 295deg, var(--blue) 305deg 325deg, var(--red) 335deg);
+    background-color: #F4AC97;
     padding: 100px 40px 60px;
     color: white;
     border: 1rem groove #e4bd34;
 }
 
-section.dishes article::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    transform: scaleY(0);
-    transform-origin: bottom;
-    background-image: url("/images/zalm.png");
-    transition: transform 0.5s;
-}
-
-section.dishes article:hover::before {
-    cursor: grab;
-    transform: scaleY(1);
-    transform-origin: bottom;
-    transition: transform 0.5s;
+section.dishes article:hover {
+    transform: scale(1);
+    filter: blur(0px);
+    opacity: 1;
+    box-shadow:0 8px 20px 0px rgba(0,0,0,0.125);
+    cursor: pointer;
 }
 
 section.dishes article span {
@@ -268,4 +279,10 @@ section.dishes article:hover p {
 
 ::-webkit-scrollbar-thumb:hover {
     background: #907720;
+}
+
+@media print {
+    body {
+        display: none;
+    }
 }
