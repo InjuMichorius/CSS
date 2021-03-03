@@ -201,6 +201,7 @@ section.dishes article {
     padding: 100px 40px 60px;
     color: white;
     border: 1rem groove #e4bd34;
+    margin: 0 1rem 1rem;
 }
 
 section.dishes article:hover {
