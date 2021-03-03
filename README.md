@@ -1,5 +1,5 @@
 # Russ & Daughters
-IMAGE
+![Cover image of the application](https://github.com/InjuMichorius/CSS-Garden/blob/master/images/README%20images/cover.jpg)
 
 This project contains a food menu site using only HTML and CSS. It was created to experiment with pseudo selectors and unknown CSS properties. The assignment came from the HvA (Hogeschool van Amsterdam).
 
