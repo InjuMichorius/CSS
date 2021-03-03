@@ -17,18 +17,17 @@ This week I worked further on __shapes__ and __animation__. I decided I wanted t
 I've also tried to recreate the __arch of text__. I used [this site](https://css-tricks.com/snippets/svg/curved-text-along-path/) to help me, but I haven't figured out why this doesn't work for me (yet). I think the solution is changing the __width__ and/or __font-size__.
 
 ![Image of an arch of text, using CSS properties path and textpath](https://github.com/InjuMichorius/CSS-Garden/blob/master/images/README%20images/archOfTextWeek2.JPG)
+I'm also starting to really get stuck on the restrictions. Next week I want to implement them.
 
 ## Week 3
-Laat je voortgang zien ('praatje met plaatjes').
-Wat ging er soepel en wat was lastig.
-Welke experimenten heb je gedaan die die 'mislukt' zijn.
-Heb je nieuwe inzichten hoe je de kracht CSS kunt benutten (of juist niet).
-Neem wijzigingen aan je 1e plan op.
-Waar liggen je (nieuwe) uitdagingen voor komende week.
+I still haven't figured out the __Arch of text__, so I decided to let it be for what it was. I've changed the hangingman to a PNG, so you don't see the white background anynmore. I've tried a lot of different things for the __main__, but I still can't find anything fitting. 
+
+I've decided what restrictions and context I want to use;
+* Print-stylesheet
+* Apply SVG in shapes, masks and context
+* No circles, squares and triangles.
 
 ## Week 4
-Bespreek je eindresultaat. ('praatje met plaatjes').
-Wat ging er soepel , wat was lastig en waar ben je trots op.
-Welke experimenten heb je gedaan die die 'mislukt' zijn.
-Heb je nieuwe inzichten hoe je de kracht CSS kunt benutten (of juist niet).
-Waar wil je meer mee gaan doen.
+The endresult is a original, fun but not so accesable restaurant website. I'm most proud of my sun, because it really catches the eye. It was also a pretty easy task, but it costed a lot of time. Creating a main that fits well with the rest was one of the hardest things to do. I couldn't figure out what I wanted and in the end I got stuck, because I also needed to take the restrictions in account. I tried a lot of things on the main, whether I needed to use all recipes or just the categories and make the user choose.
+
+I got a lot of new experiences out of this, which I will definatly use in the future. The "kickoff" was 100% a lifesaver, since it opens you up to new ideas on how to use CSS. It made me curious and excited to start. Animations is my favourite thing about CSS and I will explore this side more in the future.
