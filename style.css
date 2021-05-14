@@ -11,9 +11,18 @@
     --neptune: #419BB1;
 }
 
+@font-face {
+    font-family: runyTunes;
+    src: url('./RunyTunesRevisitedNF.otf');
+}
+
+@font-face {
+    font-family: adineKirnberg;
+    src: url('./AdineKirnberg-Script.ttf');
+}
+
 body {
     overflow-x: hidden;
-    border-style: groove;
 }
 
 /* Landing screen styling */
@@ -25,18 +34,20 @@ header {
     height: 100vh;
     background-color: white;
     z-index: -1;
-    font-family: 'Lora', serif;
 }
 
 header h2 {
     text-align: center;
     width: 100vw;
+    font-size: 2rem;
+    font-family: 'adineKirnberg';
 }
 
 header h1 {
     width: 100vw;
     text-align: center;
     font-size: 10rem;
+    font-family: 'runyTunes';
 }
 
 /* Styling and animating sun */
@@ -281,6 +292,15 @@ section.dishes article:hover p {
 ::-webkit-scrollbar-thumb:hover {
     background: #907720;
 }
+
+.noshes-content, .boards-content, .platters-content, .eggs-content, .salads-content, .sweet-content {
+    display: none;
+}
+
+#noshes-form:valid + .noshes-content, #boards-form:valid + .boards-content, #platters-form:valid + .platters-content, #eggs-form:valid + .eggs-content, #salads-form:valid + .salads-content, #sweet-form:valid + .sweet-content {
+    display: block;
+}
+  
 
 @media print {
     body {
