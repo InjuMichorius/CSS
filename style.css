@@ -23,6 +23,7 @@
 
 body {
     overflow-x: hidden;
+    background-color: var(--neptune);
 }
 
 /* Landing screen styling */
@@ -31,9 +32,8 @@ header {
     position: fixed;
     overflow: hidden;
     width: 100vw;
-    height: 100vh;
-    background-color: white;
-    z-index: -1;
+    background-color: var(--gold);
+    z-index: 10000;
 }
 
 header h2 {
@@ -58,6 +58,7 @@ header h1 {
     align-items: center;
     justify-content: center;
     overflow: hidden;
+    z-index: -1;
 }
 
 .inner-sun {
@@ -111,6 +112,7 @@ header h1 {
 }
 
 /* Styling and animating hanging man */
+
 .hanging-man {
     position: fixed;
     left: 50%;
@@ -156,8 +158,6 @@ header h1 {
 }
 
 main {
-    position: absolute;
-    margin-top: 100vh;
     width: 100vw;
     height: 100vh;
     z-index: 1000;
@@ -173,93 +173,12 @@ main {
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    animation: mainUp 2s ease 5s 1 normal forwards;
-}
-
-.test {
-    --red: purple;
 }
 
 @keyframes mainUp {
     to {
-        margin-top: 0vh;
+        transform: translateY(-60%);
     }
-}
-
-/* Dishes styling */
-section.dishes {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    width: 70vw;
-    margin: 5rem auto;
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    z-index: 1000;
-}
-
-section.dishes:hover article {
-    filter: blur(3px);
-    opacity: 0.5;
-    transform: scale(0.9);
-    box-shadow: none;
-}
-
-section.dishes article {
-    position: relative;
-    width: 20rem;
-    height: 25rem;
-    background-color: #F4AC97;
-    padding: 100px 40px 60px;
-    color: white;
-    border: 1rem groove #e4bd34;
-    margin: 0 1rem 1rem;
-}
-
-section.dishes article:hover {
-    transform: scale(1);
-    filter: blur(0px);
-    opacity: 1;
-    box-shadow:0 8px 20px 0px rgba(0,0,0,0.125);
-    cursor: pointer;
-}
-
-section.dishes article span {
-    margin-bottom: 1rem;
-    display: block;
-    text-align: center;
-}
-
-section.dishes article:hover span {
-    position: absolute;
-    text-align: left;
-    font-size: 3rem;
-    top: 40px;
-    font-weight: 800;
-    z-index: 1000;
-}
-
-section.dishes article h3 {
-    text-align: center;
-}
-
-section.dishes article:hover h3 {
-    position: absolute;
-    text-align: left;
-    font-size: 1.5em;
-    z-index: 2;
-}
-
-section.dishes article p {
-    display: none;
-}
-
-section.dishes article:hover p {
-    display: block;
-    position: absolute;
-    font-size: 1rem;
-    top: 10rem;
-    max-width: 15rem;
-    z-index: 1000;
 }
 
 ::selection {
@@ -293,17 +212,107 @@ section.dishes article:hover p {
     background: #907720;
 }
 
-.noshes-content, .boards-content, .platters-content, .eggs-content, .salads-content, .sweet-content {
+.noshes-content, .boards-content, .platters-content, .eggs-content, .soup-content, .salads-content, .sweet-content {
     display: none;
 }
 
-#noshes-form:valid + .noshes-content, #boards-form:valid + .boards-content, #platters-form:valid + .platters-content, #eggs-form:valid + .eggs-content, #salads-form:valid + .salads-content, #sweet-form:valid + .sweet-content {
+#noshes-form:valid~.noshes-content, #boards-form:valid~.boards-content, #platters-form:valid~.platters-content, #eggs-form:valid~.eggs-content, #soup-form:valid~.soup-content, #salads-form:valid~.salads-content, #sweet-form:valid~.sweet-content {
     display: block;
 }
-  
+
+form {
+    margin: 1rem auto;
+    text-align: center;
+    width: 30%;
+}
+
+form label {
+    background-color: var(--red);
+    display: block;
+    color: black;
+    font-family: 'runyTunes';
+    font-size: 2rem;
+}
+
+form label:hover {
+    cursor: pointer;
+    background-color: var(--gold);
+    color: var(--red);
+}
+
+#noshes-form:valid, #boards-form:valid, #platters-form:valid, #eggs-form:valid, #soup-form:valid, #salads-form:valid, #sweet-form:valid {
+    border: 3px solid var(--neptune);
+}
+
+form input {
+    display: none;
+}
+
+h4 {
+    font-family: 'runyTunes';
+    font-size: 2rem;
+    margin: 6rem 0 3rem;
+}
+
+section.dishes {
+    width: 50%;
+    margin: auto;
+    text-align: center;
+}
+
+section.dishes article {
+    border: 0.5rem groove var(--gold);
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+section.dishes:hover article {
+    filter: blur(1px);
+    opacity: 0.8;
+    box-shadow: none;
+}
+
+section.dishes article:hover {
+    transform: scale(1);
+    filter: blur(0px);
+    opacity: 1;
+    box-shadow:0 8px 20px 0px rgba(0,0,0,0.125);
+    cursor: pointer;
+}
 
 @media print {
     body {
+        border: 0.5rem groove var(--gold);
+    }
+
+    header {
+        position: static;
+        width: 80%;
+    }
+
+    header h1 {
+        font-size: 3rem;
+    }
+
+    header h2 {
+        font-size: 2rem;
+    }
+
+    header img, form, .sun {
         display: none;
     }
+
+    section.noshes-content article {
+        border: none;
+    }
+
+    main {
+        width: 100%;
+        height: 100%;
+    }
+
+    .noshes-content, .boards-content, .platters-content, .eggs-content, .soup-content, .salads-content, .sweet-content {
+        display: block;
+    }
+
 }

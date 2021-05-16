@@ -19,78 +19,77 @@
             <h1>Russ & Daughters</h1>
         </div>
         <img src="./images/hanging-man.png" alt="Man who has been hung" class="hanging-man">
-
-        <section class="sun hide">
-            <div class="outer-sun"></div>
-            <div class="inner-sun"></div>
-        </section>
     </header>
 
+
+    <section class="sun">
+        <div class="outer-sun"></div>
+        <div class="inner-sun"></div>
+    </section>
+
     <main>
-        <div class="main-sun">
-            <div class="outer-sun test"></div>
-            <div class="inner-sun"></div>
-        </div>
+
         <form action="" id="noshes-form">
             <label for="noshes">Noshes - small dishes
                 <input type="checkbox" id="noshes" required>
             </label>
         </form>
-        <p class="noshes-content">NOSHES CONTENT</p>
 
         <form action="" id="boards-form">
             <label for="boards">Boards - open-faced sandwiches
                 <input type="checkbox" id="boards" required>
             </label>
         </form>
-        <p class="boards-content">BOARDS CONTENT</p>
 
         <form action="" id="platters-form">
             <label for="platters">Platters - to be shared
                 <input type="checkbox" id="platters" required>
             </label>
         </form>
-        <p class="platters-content">PLATTERS CONTENT</p>
 
         <form action="" id="eggs-form">
             <label for="eggs">Eggs - served all the time
                 <input type="checkbox" id="eggs" required>
             </label>
         </form>
-        <p class="eggs-content">EGGS CONTENT</p>
+
+        <form action="" id="soup-form">
+            <label for="soup">Soup
+                <input type="checkbox" id="soup" required>
+            </label>
+        </form>
 
         <form action="" id="salads-form">
             <label for="salads">Salads
                 <input type="checkbox" id="salads" required>
             </label>
         </form>
-        <p class="salads-content">SALADS CONTENT</p>
 
         <form action="" id="sweet-form">
             <label for="sweet">Sweet
                 <input type="checkbox" id="sweet" required>
             </label>
         </form>
-        <p class="sweet-content">SWEET CONTENT</p>
-        
-        <!-- <section class="dishes">
+
+        <section class="noshes-content dishes">
+            <h4>Noshes - small dishes</h4>
             <article>
-                <span>€8</span>
+                <span>8</span>
                 <h3>Russ & Daughters Knishes</h3>
                 <p>Potato, carmelized onion, mustard</p>
             </article>
             <article>
-                <span>€13</span>
+                <span>13</span>
                 <h3>Hot Smoke/Cold Smoke</h3>
                 <p>Kippered baked Salmon & Scottish smoked salmon spread, waffle-cut potato chips</p>
             </article>
             <article>
-                <span>€13</span>
+                <span>13</span>
                 <h3>Potato latkes</h3>
                 <p>Salmon roe and creme fraiche</p>
             </article>
             <article>
-                <span>?</span>
+                <span>9</span>
                 <h3>Kasha Varnishkas</h3>
                 <p>buckwheat, caramelized onion, bowtie egg noodles</p>
             </article>
@@ -102,7 +101,8 @@
             <article>
                 <span>10</span>
                 <h3>Super heebster</h3>
-                <p>whitefish & baked salmon salad, wasabi-infused fish roe, horseradish dill cream cheese, bagel toast</p>
+                <p>whitefish & baked salmon salad, wasabi-infused fish roe, horseradish dill cream cheese, bagel toast
+                </p>
             </article>
             <article>
                 <span>12</span>
@@ -114,9 +114,12 @@
                 <h3>Sours</h3>
                 <p>pickled vegetables, pickles from the barrel</p>
             </article>
+        </section>
+        <section class="boards-content dishes">
+            <h4>Boards - open-faced sandwiches</h4>
             <article>
                 <span>16</span>
-                <h3>The Classic</h3>
+                <h3>The classic</h3>
                 <p>gaspe nova smoked salmon, cream cheese, bagel-bialy, tomato, onion, capers</p>
             </article>
             <article>
@@ -131,29 +134,38 @@
             </article>
             <article>
                 <span>16</span>
-                <h3>Yum Kippered</h3>
+                <h3>Yum kippered</h3>
                 <p>kippered (baked) salmon, cream cheese, bagel/bialy, tomato, onion, capers</p>
             </article>
+        </section>
+        <section class="platters-content dishes">
+            <h4>Platters - to be shared</h4>
             <article>
-                <span>smoked fish</span>
-                <h3>60</h3>
-                <p>Serves 3 - 4 people with cream cheese, onion, tomato, capers & new potato salad and Russ & daughters bread basket</p>
+                <span>24</span>
+                <h3>Smoked fish</h3>
+                <p>Serves 3 - 4 people with cream cheese, onion, tomato, capers & new potato salad and Russ & daughters
+                    bread basket</p>
             </article>
             <article>
                 <span>80</span>
-                <h3>The Hattie</h3>
+                <h3>The hattie</h3>
                 <p>smoked whitefish, kippered (baked) salmon, gaspe nova smoked salmon, sable</p>
             </article>
             <article>
                 <span>70</span>
-                <h3>The Ida</h3>
+                <h3>The ida</h3>
                 <p>scottish smoked salmon, gaspe nova smoked salmon, pastrami-cured salmon, gravlox</p>
             </article>
             <article>
                 <span>90</span>
-                <h3>The Anne</h3>
-                <p>western nova smoked salmon, private stock sturgeon, sable, smoked brook trout, wild alaskan salmon roe</p>
+                <h3>The anne</h3>
+                <p>western nova smoked salmon, private stock sturgeon, sable, smoked brook trout, wild alaskan salmon
+                    roe</p>
             </article>
+        </section>
+        <section class="eggs-content dishes">
+            <h4>Eggs - served all the time</h4>
+            <q>"Ess gezinter hayt." Eat in good health. -Yiddish idiom</q>
             <article>
                 <span>15</span>
                 <h3>Lox, eggs & onions</h3>
@@ -161,12 +173,12 @@
             </article>
             <article>
                 <span>19</span>
-                <h3>sturgeon, eggs & onion</h3>
+                <h3>Sturgeon, eggs & onion</h3>
                 <p>with toasted pumpernickel</p>
             </article>
             <article>
                 <span>12</span>
-                <h3>bella's matzo brei</h3>
+                <h3>Bella's matzo brei</h3>
                 <p>matzo, egg, applesauce, sour cream</p>
             </article>
             <article>
@@ -176,19 +188,22 @@
             </article>
             <article>
                 <span>18</span>
-                <h3>Eggs Benny</h3>
+                <h3>Eggs benny</h3>
                 <p>poached eggs, scottish smoked salmon, sautéed spinach, hollandaise, challah</p>
             </article>
             <article>
                 <span>15</span>
-                <h3>farm egg omelette</h3>
+                <h3>Farm egg omelette</h3>
                 <p>gaspe nova smoked salmon, cream cheese</p>
             </article>
             <article>
                 <span>180</span>
-                <h3>soft scrambled eggs & caviar</h3>
+                <h3>Soft scrambled eggs & caviar</h3>
                 <p>custard-like egg, caviar with challah</p>
             </article>
+        </section>
+        <section class="soup-content dishes">
+            <h4>Soup</h4>
             <article>
                 <span>8</span>
                 <h3>Matzo Ball</h3>
@@ -206,40 +221,74 @@
             </article>
             <article>
                 <span>10</span>
-                <h3>Smoked Whitefish Chowder</h3>
+                <h3>Smoked whitefish chowder</h3>
                 <p>dill, esplette pepper, matzo</p>
             </article>
+        </section>
+        <section class="salads-content dishes">
+            <h4>Salads</h4>
             <article>
                 <span>9</span>
-                <h3>Mixed Green</h3>
+                <h3>Mixed green</h3>
                 <p>greens, fennel, dill, capers, citrus dressing</p>
             </article>
             <article>
                 <span>14</span>
-                <h3>Chopped Salad</h3>
+                <h3>Chopped salad</h3>
                 <p>smoked whitefish, avocado, beets, egg, apple, mixed greens, matzo, buttermilk dressing</p>
             </article>
             <article>
                 <span>14</span>
-                <h3>Smoked Trout& Potato</h3>
+                <h3>Smoked trout & potato</h3>
                 <p>smoked trout, watercress, caper mustard dressing</p>
             </article>
+        </section>
+        <section class="sweet-content dishes">
+            <h4>Sweet</h4>
+            <q>"A moltsayt on a tsimes iz via a mayse on a moshl." A meal without a sweet dish is like a story without a
+                moral. — Yiddish idiom</q>
+
             <article>
                 <span>8</span>
-                <h3>blintzes</h3>
+                <h3>Blintzes</h3>
                 <p>fruit compote, sour cream</p>
             </article>
             <article>
                 <span>10</span>
-                <h3>babka french toast</h3>
+                <h3>Babka french toast</h3>
                 <p>chocolate babka, sour cream, berries</p>
             </article>
             <article>
                 <span>7</span>
-                <h3>Noodle Kugel</h3>
+                <h3>Noodle kugel</h3>
                 <p>farmer cheese, raisins, egg noodles</p>
             </article>
-        </section> -->
+            <article>
+                <span>9</span>
+                <h3>Challah bread pudding</h3>
+                <p>dried apricots, caramel sauce</p>
+            </article>
+            <article>
+                <span>8</span>
+                <h3>Halvah ice cream</h3>
+                <p>halvah, sesame, salted caramel</p>
+            </article>
+            <article>
+                <span>6</span>
+                <h3>Grandpa's grapefruit</h3>
+                <p>grapefruit, white germ, maple syrup</p>
+            </article>
+            <article>
+                <span>7</span>
+                <h3>Baked farmer cheese</h3>
+                <p>blueberry, walnut & honey with pumpernickel</p>
+            </article>
+            <article>
+                <span>8</span>
+                <h3>Cookie plate</h3>
+                <p>Russ & daughters cookies & sweets</p>
+            </article>
+        </section>
     </main>
 </body>
 
