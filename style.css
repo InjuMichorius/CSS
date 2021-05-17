@@ -280,6 +280,10 @@ section.dishes article:hover {
     cursor: pointer;
 }
 
+main h3 {
+    font-family: 'runyTunes';
+}
+
 @media print {
     body {
         border: 0.5rem groove var(--gold);
@@ -302,7 +306,7 @@ section.dishes article:hover {
         display: none;
     }
 
-    section.noshes-content article {
+    section.dishes article {
         border: none;
     }
 
